@@ -14,19 +14,23 @@
 body{font-family: 'Indie Flower', cursive;
     font-family: 'Poppins', sans-serif;
     color: white;
-    text-transform: uppercase;}
+    text-transform: uppercase;
+    text-align: center;
+}
 
 #container{
-    height: 713px;
+    height:100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: url(./img/bg3.jpg) repeat center;
-    gap: 15px;}
+    gap: 15px;
+}
 h2{
     font-weight: 900;
     font-size: 45px;
+    max-width: 500px;
     /* text-shadow:
     0 0 100px #fff,
     0 0 90px rgb(0, 0, 0),
@@ -41,6 +45,7 @@ p{
     font-weight: 700;
     font-size: 20px;
     padding-top: 15px;
+    max-width: 900px;
 }
 
 #card {
@@ -81,7 +86,7 @@ p{
     font-weight: 600;
     font-size: 17px;
     border-radius: 2px;
-    padding: 5px;
+    padding: 5px 10px;
     font-family: var(--font-poppins);
     background: #e34c5b;
 }
@@ -93,9 +98,10 @@ p{
     width: 125px;
     cursor: pointer;
     background: var(--green);
+    color: var(--white);
 }
 .button:hover{
-color: var(--white);
+color: var(--black);
 background: var(--green);
 transition: all 0.5s ease;
 }
@@ -104,4 +110,17 @@ transition: all 0.5s ease;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+@media (max-width: 768px){
+    p{
+        max-width: 600px;
+    }
+}
+@media(max-width: 576px){
+    h2{
+        max-width:300px;
+    }
+    p{
+        max-width: 300px;
+    }
 }
