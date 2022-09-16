@@ -78,12 +78,16 @@ p{
     border: none;
     outline: none;
     width: 140px;
-    background: var(--grey);
     font-weight: 600;
     font-size: 17px;
-    border-radius: 4px;
+    border-radius: 2px;
     padding: 5px;
     font-family: var(--font-poppins);
+    background: #e34c5b;
+}
+#input::placeholder{
+    color: white;
+
 }
 .button{
     width: 125px;
