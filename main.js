@@ -69,12 +69,12 @@ const addPizza = e => {
     let guardarValor = $input.value;
     $input.value = '';
     if(!guardarValor.length){
-        $card.innerHTML = ` <img src="./img/vacio.jpg" class="imagen">;
+        $card.innerHTML = ` <img src="./img/vacio.jpg" class="imagen">
                             <p>Esta vacío. Por favor ingresa un número del 1 al 6</p>`
         return;
     } else if (guardarValor < 1 || guardarValor > 6){
-        $card.innerHTML = ` <img src="./img/tepasastemono.png" class="imagen">;
-        <p>Te dije que ingreses un número del 1 al 6, por favor</p>`
+        $card.innerHTML = ` <img src="./img/mal.png" class="imagen">
+        <p>Por favor ingresa un numéro del 1 al 6</p>`
         return;
     }
     else{
