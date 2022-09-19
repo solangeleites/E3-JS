@@ -86,7 +86,7 @@ const addPizza = e => {
     } else if (guardarValor < 1 || guardarValor > 6){
         $card.innerHTML = ` <div class = "errores">
                             <img src="./img/mal.jfif" class="imagen">
-                            <p class="error">Por favor ingresa un numéro del 1 al 6</p>
+                            <p class="error">Te dije que ingreses un numéro del 1 al 6</p>
                             </div>`
         return;
     }
