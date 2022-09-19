@@ -49,18 +49,20 @@ p{
     font-weight: 700;
     font-size: 20px;
     padding-top: 15px;
-    max-width: 900px;
+    max-width: 800px;
     text-shadow: black 0px 0px 5px;
 }
 p span{
-    color: rgb(255, 123, 0);
-    text-shadow: rgb(0, 0, 0) 0px 0px 5px;}
+    color: rgb(255, 0, 0);
+    font-size: 25px;
+    background: var(--black);
+    text-shadow: rgb(211, 210, 210) 0px 0px 2px;
+}
 .card, .errores{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 50px;
     border-radius: 10px;
     background: #57323294;
     box-shadow: inset 34px 34px 59px #45282876,
@@ -141,15 +143,60 @@ transition: all 0.5s linear;
 }
 
 @media (max-width: 768px){
+    h2{
+        font-size: 32px;
+    }
     p{
-        max-width: 600px;
+        max-width: 500px;
+        font-size: 20px
+    }
+    p span{
+        font-size: 25px;
+    }
+    .card, .errores{
+        max-width: 500px;
+        padding: 10px;
+    }
+
+    .imagen{
+        max-width: 450px;
+    }
+    .ingredientes{
+        min-width: 500px;
     }
 }
 @media(max-width: 576px){
     h2{
         max-width:300px;
+        font-size: 23px;
     }
     p{
-        max-width: 300px;
+        max-width: 350px;
+        font-size: 16px;
+    }
+    p span{
+        font-size: 20px;
+    }
+    .card, .errores{
+        max-width: 360px;
+        padding: 10px;
+    }
+    .imagen{
+        max-height: 200px;
+        max-width:280px;
+    }
+    .ingredientes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        min-width: 150px;
+        text-align: center;
+        padding: 10px 0px;
+
+    }
+    #card{
+        min-width: 330px;
     }
 }

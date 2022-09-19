@@ -10,7 +10,7 @@ const pizzas = [
         id: 2,
         name: "4 Quesos",
         src: "./img/4quesos.jpg",
-        ingredients: ["salsa de tomate", "mozzarella", "parmesano", "provolone", "roquefort"],
+        ingredients: ["salsa de tomate", "mozzarella", "provolone", "roquefort"],
         price:1300
     },
     {
