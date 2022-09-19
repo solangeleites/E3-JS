@@ -25,7 +25,7 @@ body{font-family: 'Indie Flower', cursive;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url(./img/bg2.jpg) repeat center;
+    background: url(./img/bg2.jpg) no-repeat center/cover;
     gap: 15px;
 }
 h2{
