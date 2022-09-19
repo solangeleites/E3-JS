@@ -8,6 +8,7 @@
     --black: #000000;
     --white: #ffffff;
     --grey: #cccccc;
+    --orange: rgba(255, 123, 0, 0.734);
     --font-indie: font-family: 'Indie Flower', cursive;
     --font-poppins: font-family: 'Poppins', sans-serif;
 }
@@ -24,13 +25,15 @@ body{font-family: 'Indie Flower', cursive;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url(./img/bg3.jpg) repeat center;
+    background: url(./img/bg2.jpg) repeat center;
     gap: 15px;
 }
 h2{
     font-weight: 900;
     font-size: 45px;
     max-width: 500px;
+    text-shadow: black 0px 0px 5px;
+    margin: 0 auto;
     /* text-shadow:
     0 0 100px #fff,
     0 0 90px rgb(0, 0, 0),
@@ -41,24 +44,44 @@ h2{
     0 0 100px #0fa,
     0 0 100px #0fa; */
     }
+
 p{
     font-weight: 700;
     font-size: 20px;
     padding-top: 15px;
     max-width: 900px;
+    text-shadow: black 0px 0px 5px;
 }
-
-#card {
+p span{
+    color: rgb(255, 123, 0);
+    text-shadow: rgb(0, 0, 0) 0px 0px 5px;}
+.card, .errores{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    border-radius: 50px;
+    border-radius: 10px;
+    background: #57323294;
+    box-shadow: inset 34px 34px 59px #45282876,
+                inset -34px -34px 59px #693d3d70;
+    padding: 10px 15px;
+}
+.errores{
+    background: #bb1313c0;
+
+}
+#card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
 }
 .nombre{
     color: var(--white);
     font-weight: 800;
     font-size: 35px;
+    text-shadow: black 0px 0px 5px;
 }
 .imagen{
     display:flex;
@@ -73,11 +96,13 @@ p{
     color: var(--white);
     font-weight: 700;
     font-size: 18px;
+    text-shadow: black 0px 0px 5px;
 }
 .precio{
     color: var(--white);
     font-weight: 700;
     font-size: 18px;
+    text-shadow: black 0px 0px 5px;
 }
 #input, .button{
     border: none;
@@ -88,22 +113,22 @@ p{
     border-radius: 2px;
     padding: 5px 10px;
     font-family: var(--font-poppins);
-    background: #e34c5b;
+    background:var(--orange) ;
 }
 #input::placeholder{
     color: white;
-
 }
 .button{
     width: 125px;
     cursor: pointer;
-    background: var(--green);
+    border-radius: 2px;
+    background: #02d77b;
     color: var(--white);
 }
 .button:hover{
 color: var(--black);
-background: var(--green);
-transition: all 0.5s ease;
+background: var(--red);
+transition: all 0.5s linear;
 }
 .vacio{
     display: flex;
@@ -111,6 +136,10 @@ transition: all 0.5s ease;
     justify-content: center;
     align-items: center;
 }
+.input__vacio, .error{
+    text-shadow: black 0px 0px 5px;
+}
+
 @media (max-width: 768px){
     p{
         max-width: 600px;
