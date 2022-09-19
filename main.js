@@ -49,14 +49,9 @@ const $input = d.getElementById('input');
 const $form = d.getElementById('form');
 // console.log($input)
 let pizza =  []
-// *con la funcion ya creada para guardar en el local storage
-// *1- le paso como parametro $card que va a ser el contenedor de las cards que se van a renderizar
-// *2- uso el local storage y uso set item para agregar lo que necesito que se guarde en el localS.
-// *3- le paso como 'key' el array de pizzas. y segundo el valor que se va  a guardar dentro.
-//*4- esto me devuelvo un objet
-//*5 -
-const guardarEnLocalStorage =  card  =>{
-    localStorage.setItem('pizzas', JSON.stringify(card))
+
+const guardarEnLocalStorage =  pizzas  =>{
+    localStorage.setItem('card', JSON.stringify(pizzas))
 }
 const buscarPizza = value => {
     let pizzaEncontrada = pizzas.find(pizzas => pizzas.id === Number(value));
@@ -94,10 +89,7 @@ const addPizza = e => {
         let pizzaEncontrada = buscarPizza(guardarValor);
         $card.innerHTML = renderPizza(pizzaEncontrada);
     }
-
-    // *creo la funcion para guardar en el local storage
-    // *le paso como parametro la card que es el lugar donde se va a gaurdar lo renderizado y lo que voy a querer que se guarde en el local storage
-    guardarEnLocalStorage(card)
+    guardarEnLocalStorage(pizzas)
 }
 const init = () => {
 $form.addEventListener ('submit', addPizza);
