@@ -17,7 +17,7 @@ const pizzas = [
         id: 3,
         name: "Vegan",
         src: "./img/vegan.jpg",
-        ingredients: ["salsa de tomate", "tomates secos", "espinaca", "queso de almendras"],
+        ingredients: ["salsa de tomate", "espinaca", "queso de almendras"],
         price:100
     },
     {
@@ -62,11 +62,13 @@ const renderPizza = pizzas => {
     return `<div class="card"> 
             <h2>Pizza: ${pizzas.name}</h2>
             <img src= ${pizzas.src} alt="pizza" class="imagen">
-            <p class = "ingredientes">Ingredientes: ${pizzas.ingredients}</p>
+            <p class = "ingredientes">Ingredientes: ${pizzas.ingredients}.</p>
             <p class = "precio">Precio: 
             $ ${pizzas.price}</p>
             </div>`
 }
+
+
 const addPizza = e => {
     e.preventDefault();
 
@@ -77,19 +79,21 @@ const addPizza = e => {
                             <img src="./img/vacio.jpg" class="imagen">
                             <p class="input__vacio">Esta vacío. Por favor ingresa un número del 1 al 6</p>
                             </div>`
-        return;
     } else if (guardarValor < 1 || guardarValor > 6){
         $card.innerHTML = ` <div class = "errores">
                             <img src="./img/mal.jfif" class="imagen">
-                            <p class="error">Te dije que ingreses un numéro del 1 al 6</p>
+                            <p class="error">Un numéro del 1 al 6, por favor</p>
                             </div>`
-        return;
     }
     else{
         let pizzaEncontrada = buscarPizza(guardarValor);
         $card.innerHTML = renderPizza(pizzaEncontrada);
     }
     guardarEnLocalStorage(pizzas)
+    setTimeout(() => {
+        $card.innerHTML = '';
+        console.log('me estoy ejecuantado despues de dos segundos')
+        }, 2500);
 }
 const init = () => {
 $form.addEventListener ('submit', addPizza);

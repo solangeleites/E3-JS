@@ -1,7 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,900&display=swap');
 *{box-sizing: border-box; padding: 0%; margin: 0;}
-
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,900&display=swap');
-
 :root{
     --red: #e34c5b;
     --green: #47866b;
@@ -9,54 +7,48 @@
     --white: #ffffff;
     --grey: #cccccc;
     --orange: rgba(255, 123, 0, 0.734);
-    --font-indie: font-family: 'Indie Flower', cursive;
-    --font-poppins: font-family: 'Poppins', sans-serif;
 }
-body{font-family: 'Indie Flower', cursive;
+body{
     font-family: 'Poppins', sans-serif;
     color: white;
-    text-transform: uppercase;
     text-align: center;
+    background: url(./img/bg2.jpg) no-repeat center/cover;
 }
 
 #container{
-    height:100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url(./img/bg2.jpg) no-repeat center/cover;
     gap: 15px;
+    height: 100vh;
+}
+.title{
+    font-size: 60px;
+    font-weight: 900;
+    color: var(--white);
+    text-shadow: black 0px 0px 5px;
 }
 h2{
-    font-weight: 900;
-    font-size: 45px;
+    font-weight: 700;
+    font-size: 25px;
     max-width: 500px;
     text-shadow: black 0px 0px 5px;
     margin: 0 auto;
-    /* text-shadow:
-    0 0 100px #fff,
-    0 0 90px rgb(0, 0, 0),
-    0 0 80px rgb(0, 0, 0),
-    0 0 5px #0fa,
-    0 0 50px #0fa,
-    0 0 0px #0fa,
-    0 0 100px #0fa,
-    0 0 100px #0fa; */
-    }
+    padding: 5px;
+}
 
 p{
-    font-weight: 700;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 25px;
     padding-top: 15px;
-    max-width: 800px;
+    max-width: 1200px;
     text-shadow: black 0px 0px 5px;
 }
 p span{
     color: rgb(255, 0, 0);
     font-size: 25px;
     background: var(--black);
-    text-shadow: rgb(211, 210, 210) 0px 0px 2px;
 }
 .card, .errores{
     display: flex;
@@ -73,11 +65,12 @@ p span{
     background: #bb1313c0;
 
 }
-#card {
+.card {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;   
+    align-items: center; 
+    width: 500px;
 }
 .nombre{
     color: var(--white);
@@ -90,14 +83,14 @@ p span{
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    height: 300px;
+    height: 250px;
     width: auto;
     margin: 0 auto;
 }
 .ingredientes{
     color: var(--white);
-    font-weight: 700;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 20px;
     text-shadow: black 0px 0px 5px;
 }
 .precio{
@@ -108,29 +101,34 @@ p span{
 }
 #input, .button{
     border: none;
+    height: 40px;
+    width: 220px;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.418) 0px 0px 5px 5px;
     outline: none;
-    width: 140px;
-    font-weight: 600;
-    font-size: 17px;
-    border-radius: 2px;
-    padding: 5px 10px;
-    font-family: var(--font-poppins);
-    background:var(--orange) ;
 }
 #input::placeholder{
     color: white;
 }
 .button{
-    width: 125px;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
     cursor: pointer;
-    border-radius: 2px;
-    background: #02d77b;
-    color: var(--white);
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.418) 0px 0px 5px 5px;
+}
+#input, button:focus{
+    outline: none;
 }
 .button:hover{
-color: var(--black);
-background: var(--red);
-transition: all 0.5s linear;
+    color: var(--white);
+    background: var(--black);
+    transition: all 0.3s linear;
 }
 .vacio{
     display: flex;
@@ -141,13 +139,20 @@ transition: all 0.5s linear;
 .input__vacio, .error{
     text-shadow: black 0px 0px 5px;
 }
-
+.error{
+    width: 500px;
+    font-size: 25px;
+}
 footer{
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 15px;
+    text-transform: uppercase;
     color: var(--white);
-    font-size: 12px;
+    text-shadow: black 0px 0px 5px;
 }
 @media (max-width: 768px){
     h2{
